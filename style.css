@@ -1,0 +1,132 @@
+:root {
+    --White: hsl(0, 100%, 100%);
+    --Purple-100: hsl(275, 100%, 97%);
+    --Purple-600: hsl(292, 16%, 49%);
+    --purple-700: hsl(281, 83%, 54%);
+    --Purple-950: hsl(292, 42%, 14%);
+    --Paragraphs: 16px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ---------- Mobile-first ---------- */
+body {
+    min-height: 100vh;
+    background-color: var(--Purple-100);
+    background-image: url(assets/images/background-pattern-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Work Sans', sans-serif;
+    font-size: var(--Paragraphs);
+}
+
+main {
+    max-width: 90vw;
+    background-color: var(--White);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.faq-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.faq-header img {
+    max-width: 25px;
+}
+
+.faq-header h1 {
+    color: var(--Purple-950);
+    font-size: 30px;
+}
+
+.faq-item {
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--Purple-100);
+}
+
+.faq-item:first-of-type {
+    padding-top: 0;
+}
+
+.faq-item:last-of-type {
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.faq-item h2 button {
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: start;
+    color: var(--Purple-950);
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 600;
+    font-size: var(--Paragraphs);
+    cursor: pointer;
+}
+
+.faq-item h2 button:hover {
+    color: var(--purple-700);
+}
+
+.faq-answer {
+    width: 100%;
+    color: var(--Purple-600);
+    line-height: 1.4rem;
+    font-size: 15px;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.faq-answer.open {
+    max-height: 100%;
+    opacity: 1;
+    margin-top: 1.5rem;
+    pointer-events: auto;
+}
+
+
+/* ---------- Desktop Responsive ---------- */
+@media screen and (min-width: 600px) {
+    body {
+        background-image: url(assets/images/background-pattern-desktop.svg);
+    }
+
+    main {
+        max-width: 550px;
+        background-color: var(--White);
+        padding: 2rem;
+        border-radius: 1rem;
+    }
+
+    .faq-header img {
+        max-width: 35px;
+    }
+
+    .faq-header h1 {
+        color: var(--Purple-950);
+        font-size: 50px;
+    }
+
+    .faq-item h2 button {
+        font-weight: 700;
+    }
+}

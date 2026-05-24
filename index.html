@@ -5,18 +5,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
   <title>Frontend Mentor | FAQ accordion</title>
+  <link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
 
   <main>
-    <section class="faq">
-      <header class="faq-header">
-        <img src="assets/images/icon-star.svg" alt="" aria-hidden="true">
-        <h1>FAQs</h1>
-      </header>
+    <header class="faq-header">
+      <img src="assets/images/icon-star.svg" alt="" aria-hidden="true">
+      <h1>FAQs</h1>
+    </header>
+    <section class="accordion">
       <div class="faq-item">
         <h2>
           <button class="faq-question" aria-expanded="false" aria-controls="faq1" id="faq1-btn">
@@ -25,7 +30,7 @@
             <img src="assets/images/icon-minus.svg" alt="" aria-hidden="true" hidden class="icon icon-minus">
           </button>
         </h2>
-        <div id="faq1" class="faq-answer" role="region" aria-labelledby="faq1-btn" hidden>
+        <div id="faq1" class="faq-answer" role="region" aria-labelledby="faq1-btn">
           <p>
             Frontend Mentor offers realistic coding challenges to help developers improve their
             frontend coding skills with projects in HTML, CSS, and JavaScript. It's suitable for
@@ -41,7 +46,7 @@
             <img src="assets/images/icon-minus.svg" alt="" aria-hidden="true" hidden class="icon icon-minus">
           </button>
         </h2>
-        <div id="faq2" class="faq-answer" role="region" aria-labelledby="faq2-btn" hidden>
+        <div id="faq2" class="faq-answer" role="region" aria-labelledby="faq2-btn">
           <p>
             Yes, Frontend Mentor offers both free and premium coding challenges, with the free
             option providing access to a range of projects suitable for all skill levels.
@@ -56,7 +61,7 @@
             <img src="assets/images/icon-minus.svg" alt="" aria-hidden="true" hidden class="icon icon-minus">
           </button>
         </h2>
-        <div id="faq3" class="faq-answer" role="region" aria-labelledby="faq3-btn" hidden>
+        <div id="faq3" class="faq-answer" role="region" aria-labelledby="faq3-btn">
           <p>
             Yes, you can use projects completed on Frontend Mentor in your portfolio. It's an excellent
             way to showcase your skills to potential employers!
@@ -66,12 +71,12 @@
       <div class="faq-item">
         <h2>
           <button class="faq-question" aria-expanded="false" aria-controls="faq4" id="faq4-btn">
-            How can I get help if I'm stuck on a Frontend Mentor challenge?
+            How can I get help if I'm stuck on a challenge?
             <img src="assets/images/icon-plus.svg" alt="" aria-hidden="true" class="icon icon-plus">
             <img src="assets/images/icon-minus.svg" alt="" aria-hidden="true" hidden class="icon icon-minus">
           </button>
         </h2>
-        <div id="faq4" class="faq-answer" role="region" aria-labelledby="faq4-btn" hidden>
+        <div id="faq4" class="faq-answer" role="region" aria-labelledby="faq4-btn">
           <p>
             The best place to get help is inside Frontend Mentor's Discord community. There's a help
             channel where you can ask questions and seek support from other community members.
